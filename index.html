@@ -3,32 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <title>Copy HTML from File</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <style>
-    body {
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
       font-family: Arial, sans-serif;
       background-color: #f9fafb;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 50px 20px;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 4px solid #3b82f6;
     }
 
     h1 {
-      font-size: 24px;
+      font-size: 26px;
+      margin-bottom: 20px;
       background: linear-gradient(90deg, #3b82f6, #06b6d4);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 20px;
     }
 
     .copy-btn {
       background-color: #10b981;
       color: white;
       border: none;
-      padding: 10px 16px;
+      padding: 12px 20px;
       font-size: 16px;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .copy-btn i {
+      margin-right: 8px;
     }
 
     .copy-btn:hover {
@@ -41,13 +73,28 @@
       color: #16a34a;
       display: none;
     }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 14px;
+      color: #6b7280;
+    }
   </style>
 </head>
 <body>
 
-  <h1>Copy HTML Template from File</h1>
-  <button class="copy-btn" onclick="copyFromFile()">Copy Code</button>
-  <div class="message" id="successMsg">Successfully Copied!</div>
+  <div class="container">
+    <!-- Change this image link to your logo -->
+    <img src="https://graph.org/file/4e8a1172e8ba4b7a0bdfa.jpg" class="logo" alt="Logo" />
+    <h1>Copy HTML Template from File</h1>
+    <button class="copy-btn" onclick="copyFromFile()">
+      <i class="fa fa-copy"></i> Copy Code
+    </button>
+    <div class="message" id="successMsg">Successfully Copied!</div>
+  </div>
+
+  <footer>© 2025 - Developed by 𝐖𝐎𝐎𝐃𝐜𝐫𝐚𝐟𝐭</footer>
 
   <script>
     function copyFromFile() {
@@ -69,4 +116,4 @@
   </script>
 
 </body>
-</html>
+                                          </html>
